@@ -14,18 +14,48 @@
 
 @implementation ViewController
 
+//- (instancetype)init
+//{
+//    self = [super init];
+//    if (self) {
+//
+//    }
+//    return self;
+//}
+
+//- (void)viewWillAppear:(BOOL)animated{
+//    [super viewWillAppear:animated];
+//    
+//}
+//- (void)viewDidAppear:(BOOL)animated{
+//    [super viewDidAppear:animated];
+//    
+//}
+//- (void)viewWillDisappear:(BOOL)animated{
+//    [super viewWillDisappear:animated];
+//    
+//}
+//- (void)viewDidDisappear:(BOOL)animated{
+//    [super viewDidDisappear:animated];
+//    
+//}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-   
+    self.view.backgroundColor = [UIColor yellowColor];
+    [self test1];
 }
+
+
 
 /**
  闭包方式添加控件
  */
 - (void)test1{
     
+   
     [self.view addSubview:({
            
            UILabel *lbl = [[UILabel alloc] init];
