@@ -18,7 +18,9 @@
 		4992402625202BC90092DC3E /* ShiPingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4992402525202BC90092DC3E /* ShiPingViewController.m */; };
 		4992402925202BD10092DC3E /* TuiJianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4992402825202BD10092DC3E /* TuiJianViewController.m */; };
 		4992402C25202BDE0092DC3E /* WoDeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4992402B25202BDE0092DC3E /* WoDeViewController.m */; };
-		4992402F252036150092DC3E /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4992402E252036150092DC3E /* TestViewController.m */; };
+		4992402F252036150092DC3E /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4992402E252036150092DC3E /* WKWebViewController.m */; };
+		49924032252095FE0092DC3E /* XinWenTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49924031252095FE0092DC3E /* XinWenTableViewCell.m */; };
+		49924036252099810092DC3E /* TanChuangView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49924035252099810092DC3E /* TanChuangView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,8 +64,12 @@
 		4992402825202BD10092DC3E /* TuiJianViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TuiJianViewController.m; sourceTree = "<group>"; };
 		4992402A25202BDE0092DC3E /* WoDeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WoDeViewController.h; sourceTree = "<group>"; };
 		4992402B25202BDE0092DC3E /* WoDeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WoDeViewController.m; sourceTree = "<group>"; };
-		4992402D252036150092DC3E /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
-		4992402E252036150092DC3E /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		4992402D252036150092DC3E /* WKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKWebViewController.h; sourceTree = "<group>"; };
+		4992402E252036150092DC3E /* WKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKWebViewController.m; sourceTree = "<group>"; };
+		49924030252095FE0092DC3E /* XinWenTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XinWenTableViewCell.h; sourceTree = "<group>"; };
+		49924031252095FE0092DC3E /* XinWenTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XinWenTableViewCell.m; sourceTree = "<group>"; };
+		49924034252099810092DC3E /* TanChuangView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TanChuangView.h; sourceTree = "<group>"; };
+		49924035252099810092DC3E /* TanChuangView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TanChuangView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +154,7 @@
 		4992401C25202BA50092DC3E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				49924033252099690092DC3E /* Tool */,
 				4992401D25202BA50092DC3E /* xinwen */,
 				4992401E25202BA50092DC3E /* shiping */,
 				4992401F25202BA50092DC3E /* tuijian */,
@@ -161,8 +168,10 @@
 			children = (
 				4992402125202BBF0092DC3E /* XinWenViewController.h */,
 				4992402225202BBF0092DC3E /* XinWenViewController.m */,
-				4992402D252036150092DC3E /* TestViewController.h */,
-				4992402E252036150092DC3E /* TestViewController.m */,
+				4992402D252036150092DC3E /* WKWebViewController.h */,
+				4992402E252036150092DC3E /* WKWebViewController.m */,
+				49924030252095FE0092DC3E /* XinWenTableViewCell.h */,
+				49924031252095FE0092DC3E /* XinWenTableViewCell.m */,
 			);
 			path = xinwen;
 			sourceTree = "<group>";
@@ -192,6 +201,15 @@
 				4992402B25202BDE0092DC3E /* WoDeViewController.m */,
 			);
 			path = wode;
+			sourceTree = "<group>";
+		};
+		49924033252099690092DC3E /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				49924034252099810092DC3E /* TanChuangView.h */,
+				49924035252099810092DC3E /* TanChuangView.m */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,8 +347,10 @@
 				493B40C1251F079400126716 /* AppDelegate.m in Sources */,
 				493B40D2251F079500126716 /* main.m in Sources */,
 				4992402C25202BDE0092DC3E /* WoDeViewController.m in Sources */,
-				4992402F252036150092DC3E /* TestViewController.m in Sources */,
+				4992402F252036150092DC3E /* WKWebViewController.m in Sources */,
 				4992402925202BD10092DC3E /* TuiJianViewController.m in Sources */,
+				49924036252099810092DC3E /* TanChuangView.m in Sources */,
+				49924032252095FE0092DC3E /* XinWenTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

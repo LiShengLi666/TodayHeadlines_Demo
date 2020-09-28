@@ -1,5 +1,5 @@
 //
-//  TestViewController.h
+//  TanChuangView.h
 //  TodayHeadlines
 //
 //  Created by 李   胜 on 2020/9/27.
@@ -10,7 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TestViewController : UIViewController
+@interface TanChuangView : UIView
+
+/// 展示浮层
+/// @param callBack <#callBack description#>
+- (void)showWithCallBack:(dispatch_block_t)callBack;
 
 @end
 
