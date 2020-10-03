@@ -10,15 +10,21 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// cell代理
 @protocol XinWenTableViewCellDelegat <NSObject>
 
+
+/// 点击头像回调
+/// @param tableViewCell 对象
+/// @param str 凑数的，可以忽略
 - (void)tableViewCell:(UITableViewCell *)tableViewCell clickImage:(NSString *)str;
 
 @end
 
+/// 新闻cell
 @interface XinWenTableViewCell : UITableViewCell
 
-/**  */
+/// 代理对象
 @property (nonatomic, weak) id<XinWenTableViewCellDelegat> delegate;
 
 @end

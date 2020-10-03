@@ -10,6 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// 视频控制器
 @interface ShiPingViewController : UIViewController
 
 @end

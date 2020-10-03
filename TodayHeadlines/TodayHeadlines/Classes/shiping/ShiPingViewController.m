@@ -7,6 +7,7 @@
 //
 
 #import "ShiPingViewController.h"
+#import "ShiPingCollectionViewCell.h"
 
 @interface ShiPingViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 
@@ -37,11 +38,11 @@
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.minimumLineSpacing = 10;
     flowLayout.minimumInteritemSpacing = 10;
-    flowLayout.itemSize = CGSizeMake((self.view.frame.size.width - 10)/2, 200);
+    flowLayout.itemSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.width / 16 * 9);
     // 2.创建UICollectionView，并设置布局
     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
     // 3.注册UICollectionViewCell
-    [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"UICollectionViewCell"];
+    [collectionView registerClass:[ShiPingCollectionViewCell class] forCellWithReuseIdentifier:@"UICollectionViewCell"];
     // 4.遵循代理
     collectionView.delegate = self;
     collectionView.dataSource = self;
@@ -57,8 +58,8 @@
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell" forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor redColor];
+    ShiPingCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell" forIndexPath:indexPath];
+    [cell layoutWithShiPingUrl:@"" backUrl:@""];
     return cell;
 }
 
@@ -66,13 +67,13 @@
 /**
  定制item的大小，但是有局限性，想真正的实现瀑布流，还是要重写一个流式布局
  */
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    
-    if (indexPath.item %3 == 0) {
-        return CGSizeMake(self.view.frame.size.width, 50);
-    }else{
-        return CGSizeMake((self.view.frame.size.width - 10)/2, 200);
-    }
-}
+//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+//
+//    if (indexPath.item %3 == 0) {
+//        return CGSizeMake(self.view.frame.size.width, 50);
+//    }else{
+//        return CGSizeMake((self.view.frame.size.width - 10)/2, 200);
+//    }
+//}
 
 @end

@@ -8,7 +8,8 @@
 
 #import "WKWebViewController.h"
 #import <WebKit/WebKit.h>
-
+#import "UIAdapter.h"
+#import "ZuJianHuaOne.h"
 @interface WKWebViewController ()<WKNavigationDelegate>
 
 /**  */
@@ -21,6 +22,18 @@
 
 @implementation WKWebViewController
 
++ (void)load {
+    [ZuJianHuaOne registerScheme:@"detail://" processBlock:^(NSDictionary * _Nonnull params) {
+        NSString *url = (NSString *)[params objectForKey:@"url"];
+        UINavigationController *navigationController = (UINavigationController *)[params objectForKey:@"controller"];
+        WKWebViewController *controller = [[WKWebViewController alloc] initWithUrl:url];
+        controller.testStr = @"ceshi";
+        [navigationController pushViewController:controller animated:YES];
+    }];
+    
+//    [ZuJianHuaOne registerProtol:@protocol(GTDetailViewControllerProtocol) class:[self class]];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -29,7 +42,7 @@
     self.navigationItem.title = @"WKWebView";
     
     [self.view addSubview:({
-        self.wkView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 88, self.view.frame.size.width, self.view.frame.size.height - 88)];
+        self.wkView = [[WKWebView alloc] initWithFrame:CGRectMake(0, NAVBAR_H, self.view.frame.size.width, self.view.frame.size.height - NAVBAR_H)];
         // 加载网页
         [self.wkView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://time.geekbang.org/course/intro/100025901"]]];
         // 遵循代理
@@ -40,9 +53,18 @@
     })];
     
     [self.view addSubview:({
-        self.progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 88, self.view.frame.size.width, 20)];
+        self.progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, NAVBAR_H, self.view.frame.size.width, UIAdapter(20))];
         self.progressView;
     })];
+}
+
+- (instancetype)initWithUrl:(NSString *)url{
+    self = [super init];
+    if (self) {
+        NSLog(@"WKWebView中测试 = %@",url);
+    }
+    return self;
+    
 }
 
 /**

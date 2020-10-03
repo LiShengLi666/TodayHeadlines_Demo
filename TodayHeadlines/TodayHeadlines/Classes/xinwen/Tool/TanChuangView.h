@@ -15,7 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// 展示浮层
 /// @param callBack <#callBack description#>
 - (void)showWithCallBack:(dispatch_block_t)callBack;
-
 @end
 
 NS_ASSUME_NONNULL_END

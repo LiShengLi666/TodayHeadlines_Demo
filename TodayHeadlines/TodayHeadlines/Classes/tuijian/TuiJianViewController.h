@@ -10,6 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// 推荐控制器
 @interface TuiJianViewController : UIViewController
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		490443AF252431DB00F7C5FB /* ZuJianHuaOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 490443AE252431DB00F7C5FB /* ZuJianHuaOne.m */; };
 		493B40C1251F079400126716 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 493B40C0251F079400126716 /* AppDelegate.m */; };
 		493B40C7251F079400126716 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 493B40C6251F079400126716 /* ViewController.m */; };
 		493B40CC251F079500126716 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 493B40CB251F079500126716 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 		493B40D2251F079500126716 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 493B40D1251F079500126716 /* main.m */; };
 		493B40DC251F079500126716 /* TodayHeadlinesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 493B40DB251F079500126716 /* TodayHeadlinesTests.m */; };
 		493B40E7251F079500126716 /* TodayHeadlinesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 493B40E6251F079500126716 /* TodayHeadlinesUITests.m */; };
+		494948B62521B4BE00F65F46 /* LoadData.m in Sources */ = {isa = PBXBuildFile; fileRef = 494948B52521B4BE00F65F46 /* LoadData.m */; };
 		4992402325202BBF0092DC3E /* XinWenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4992402225202BBF0092DC3E /* XinWenViewController.m */; };
 		4992402625202BC90092DC3E /* ShiPingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4992402525202BC90092DC3E /* ShiPingViewController.m */; };
 		4992402925202BD10092DC3E /* TuiJianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4992402825202BD10092DC3E /* TuiJianViewController.m */; };
@@ -21,6 +23,7 @@
 		4992402F252036150092DC3E /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4992402E252036150092DC3E /* WKWebViewController.m */; };
 		49924032252095FE0092DC3E /* XinWenTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49924031252095FE0092DC3E /* XinWenTableViewCell.m */; };
 		49924036252099810092DC3E /* TanChuangView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49924035252099810092DC3E /* TanChuangView.m */; };
+		49AE2EB22522CCE3006F8789 /* ShiPingCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AE2EB12522CCE3006F8789 /* ShiPingCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		490443AD252431DB00F7C5FB /* ZuJianHuaOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZuJianHuaOne.h; sourceTree = "<group>"; };
+		490443AE252431DB00F7C5FB /* ZuJianHuaOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZuJianHuaOne.m; sourceTree = "<group>"; };
 		493B40BC251F079400126716 /* TodayHeadlines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodayHeadlines.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		493B40BF251F079400126716 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		493B40C0251F079400126716 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -56,6 +61,8 @@
 		493B40E2251F079500126716 /* TodayHeadlinesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodayHeadlinesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		493B40E6251F079500126716 /* TodayHeadlinesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayHeadlinesUITests.m; sourceTree = "<group>"; };
 		493B40E8251F079500126716 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		494948B42521B4BE00F65F46 /* LoadData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadData.h; sourceTree = "<group>"; };
+		494948B52521B4BE00F65F46 /* LoadData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadData.m; sourceTree = "<group>"; };
 		4992402125202BBF0092DC3E /* XinWenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XinWenViewController.h; sourceTree = "<group>"; };
 		4992402225202BBF0092DC3E /* XinWenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XinWenViewController.m; sourceTree = "<group>"; };
 		4992402425202BC90092DC3E /* ShiPingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShiPingViewController.h; sourceTree = "<group>"; };
@@ -70,6 +77,9 @@
 		49924031252095FE0092DC3E /* XinWenTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XinWenTableViewCell.m; sourceTree = "<group>"; };
 		49924034252099810092DC3E /* TanChuangView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TanChuangView.h; sourceTree = "<group>"; };
 		49924035252099810092DC3E /* TanChuangView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TanChuangView.m; sourceTree = "<group>"; };
+		49AE2EB02522CCE3006F8789 /* ShiPingCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShiPingCollectionViewCell.h; sourceTree = "<group>"; };
+		49AE2EB12522CCE3006F8789 /* ShiPingCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShiPingCollectionViewCell.m; sourceTree = "<group>"; };
+		49AE2EB6252399E7006F8789 /* UIAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIAdapter.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,10 +161,18 @@
 			path = TodayHeadlinesUITests;
 			sourceTree = "<group>";
 		};
+		494948B32521B4A400F65F46 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				494948B42521B4BE00F65F46 /* LoadData.h */,
+				494948B52521B4BE00F65F46 /* LoadData.m */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
 		4992401C25202BA50092DC3E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				49924033252099690092DC3E /* Tool */,
 				4992401D25202BA50092DC3E /* xinwen */,
 				4992401E25202BA50092DC3E /* shiping */,
 				4992401F25202BA50092DC3E /* tuijian */,
@@ -166,12 +184,15 @@
 		4992401D25202BA50092DC3E /* xinwen */ = {
 			isa = PBXGroup;
 			children = (
+				494948B32521B4A400F65F46 /* NetWork */,
+				49924033252099690092DC3E /* Tool */,
 				4992402125202BBF0092DC3E /* XinWenViewController.h */,
 				4992402225202BBF0092DC3E /* XinWenViewController.m */,
 				4992402D252036150092DC3E /* WKWebViewController.h */,
 				4992402E252036150092DC3E /* WKWebViewController.m */,
 				49924030252095FE0092DC3E /* XinWenTableViewCell.h */,
 				49924031252095FE0092DC3E /* XinWenTableViewCell.m */,
+				49AE2EB6252399E7006F8789 /* UIAdapter.h */,
 			);
 			path = xinwen;
 			sourceTree = "<group>";
@@ -179,6 +200,7 @@
 		4992401E25202BA50092DC3E /* shiping */ = {
 			isa = PBXGroup;
 			children = (
+				49AE2EAF2522CCCE006F8789 /* View */,
 				4992402425202BC90092DC3E /* ShiPingViewController.h */,
 				4992402525202BC90092DC3E /* ShiPingViewController.m */,
 			);
@@ -208,8 +230,19 @@
 			children = (
 				49924034252099810092DC3E /* TanChuangView.h */,
 				49924035252099810092DC3E /* TanChuangView.m */,
+				490443AD252431DB00F7C5FB /* ZuJianHuaOne.h */,
+				490443AE252431DB00F7C5FB /* ZuJianHuaOne.m */,
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		49AE2EAF2522CCCE006F8789 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				49AE2EB02522CCE3006F8789 /* ShiPingCollectionViewCell.h */,
+				49AE2EB12522CCE3006F8789 /* ShiPingCollectionViewCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,6 +376,7 @@
 			files = (
 				493B40C7251F079400126716 /* ViewController.m in Sources */,
 				4992402625202BC90092DC3E /* ShiPingViewController.m in Sources */,
+				494948B62521B4BE00F65F46 /* LoadData.m in Sources */,
 				4992402325202BBF0092DC3E /* XinWenViewController.m in Sources */,
 				493B40C1251F079400126716 /* AppDelegate.m in Sources */,
 				493B40D2251F079500126716 /* main.m in Sources */,
@@ -351,6 +385,8 @@
 				4992402925202BD10092DC3E /* TuiJianViewController.m in Sources */,
 				49924036252099810092DC3E /* TanChuangView.m in Sources */,
 				49924032252095FE0092DC3E /* XinWenTableViewCell.m in Sources */,
+				49AE2EB22522CCE3006F8789 /* ShiPingCollectionViewCell.m in Sources */,
+				490443AF252431DB00F7C5FB /* ZuJianHuaOne.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

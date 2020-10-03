@@ -27,14 +27,13 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
         [self addSubview:({
             self.backView = [[UIView alloc] initWithFrame:self.frame];
             self.backView.alpha = 0.5;
             self.backView.backgroundColor = [UIColor blackColor];
             self.backView;
         })];
-        
+
         [self addSubview:({
             self.deleteView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
             self.deleteView.backgroundColor = [UIColor redColor];
@@ -47,27 +46,22 @@
     return self;
 }
 
-
-
-- (void)showWithCallBack:(dispatch_block_t)callBack{
-
+- (void)showWithCallBack:(dispatch_block_t)callBack {
     _deleteblock = callBack;
 
     [[UIApplication sharedApplication].delegate.window addSubview:self];
-    
+
     [UIView animateWithDuration:0.5 animations:^{
-       
-        self.deleteView.frame = CGRectMake((self.frame.size.width - 200)/2, (self.frame.size.height - 300)/2, 200, 300);
+        self.deleteView.frame = CGRectMake((self.frame.size.width - 200) / 2, (self.frame.size.height - 300) / 2, 200, 300);
     }];
 }
 
-- (void)clickRemove{
-    
+- (void)clickRemove {
     if (self.deleteblock) {
         self.deleteblock();
     }
-    
-   [self removeFromSuperview];
+
+    [self removeFromSuperview];
 }
 
 @end

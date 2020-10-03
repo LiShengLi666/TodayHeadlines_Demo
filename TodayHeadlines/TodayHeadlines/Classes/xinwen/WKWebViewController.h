@@ -10,7 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// WKWebView显示
 @interface WKWebViewController : UIViewController
+
+///
+@property (nonatomic, copy) NSString *testStr;
+
+- (instancetype)initWithUrl:(NSString *)url;
 
 @end
 

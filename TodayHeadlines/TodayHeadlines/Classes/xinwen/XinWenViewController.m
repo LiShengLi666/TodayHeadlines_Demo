@@ -7,9 +7,10 @@
 //
 
 #import "XinWenViewController.h"
-#import "WKWebViewController.h"
 #import "XinWenTableViewCell.h"
 #import "TanChuangView.h"
+#import "LoadData.h"
+#import "ZuJianHuaOne.h"
 
 @interface XinWenViewController ()<UITableViewDataSource, UITableViewDelegate, XinWenTableViewCellDelegat>
 
@@ -17,7 +18,8 @@
 @property (nonatomic, strong) UITableView *tableView;
 
 /**  */
-@property (nonatomic, strong) NSMutableArray *dataArray;
+@property (nonatomic, strong) NSArray *dataArray;
+
 @end
 
 @implementation XinWenViewController
@@ -28,11 +30,6 @@
     if (self) {
         self.view.backgroundColor = [UIColor whiteColor];
         self.tabBarItem.title = @"新闻";
-
-        self.dataArray = [NSMutableArray array];
-        for (int i = 0; i < 20; i++) {
-            [self.dataArray addObject:@(i)];
-        }
     }
     return self;
 }
@@ -54,15 +51,18 @@
     [self.tableView registerClass:[XinWenTableViewCell class] forCellReuseIdentifier:@"UITableView"];
     // 4.添加到视图上
     [self.view addSubview:self.tableView];
+    
+
+    [LoadData loadDataWithFinishBlock:^(BOOL success, NSArray * _Nonnull dataArray) {
+        self.dataArray = dataArray;
+        [self.tableView reloadData];
+    }];
 }
 
 #pragma mark - 代理方法
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     XinWenTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableView"];
     cell.delegate = self;
-    cell.textLabel.text = [NSString stringWithFormat:@"主标题 - %ld", (long)indexPath.row];
-    cell.detailTextLabel.text = @"副标题";
-    cell.imageView.image = [UIImage imageNamed:@"photo"];
     return cell;
 }
 
@@ -75,19 +75,28 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self.navigationController pushViewController:[WKWebViewController new] animated:YES];
+//    NSDictionary *dic = @{@"a":@"1",@"b":@"2"};
+//    __kindof UIViewController *detailController = [ZuJianHuaOne zuJianHua:dic];
+//    [self.navigationController pushViewController:detailController animated:YES];
+    
+    
+    [ZuJianHuaOne  openUrl:@"detail://" params:@{@"url":@"组件化测试",@"controller":self.navigationController}];
+
 }
 
-- (void)tableViewCell:(UITableViewCell *)tableViewCell clickImage:(NSString *)str {
-    TanChuangView *view = [[TanChuangView alloc] initWithFrame:self.view.bounds];
 
-    __weak __typeof(self) weakSelf = self;
-    [view showWithCallBack:^{
-        __strong __typeof(self) strongSelf = weakSelf;
-        // 先删数据，后删动画
-        [strongSelf.dataArray removeLastObject];
-        [strongSelf.tableView deleteRowsAtIndexPaths:@[[strongSelf.tableView indexPathForCell:tableViewCell]] withRowAnimation:UITableViewRowAnimationAutomatic];
-    }];
+
+
+- (void)tableViewCell:(UITableViewCell *)tableViewCell clickImage:(NSString *)str {
+//    TanChuangView *view = [[TanChuangView alloc] initWithFrame:self.view.bounds];
+//
+//    __weak __typeof(self) weakSelf = self;
+//    [view showWithCallBack:^{
+//        __strong __typeof(self) strongSelf = weakSelf;
+//        // 先删数据，后删动画
+//        [strongSelf.dataArray removeLastObject];
+//        [strongSelf.tableView deleteRowsAtIndexPaths:@[[strongSelf.tableView indexPathForCell:tableViewCell]] withRowAnimation:UITableViewRowAnimationAutomatic];
+//    }];
 }
 
 #pragma mark - 逻辑处理
